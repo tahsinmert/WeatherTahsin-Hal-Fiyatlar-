@@ -1,203 +1,159 @@
-# Türkiye Hal Fiyatları - Elma Piyasası Takip Sistemi
+# 🌤️ WeatherTahsin Hal Fiyatları - Ultra Detaylı Elma Piyasası Takip Sistemi
 
-Bu proje, Türkiye'deki hal fiyatları ve elma piyasası verilerini takip etmek için geliştirilmiş kapsamlı bir web uygulamasıdır.
+## 📋 Proje Hakkında
 
-## 🍎 Özellikler
+Bu proje, Türkiye'deki hal fiyatlarını çoklu kaynaklardan toplayarak ultra detaylı elma fiyat analizi sunan bir web uygulamasıdır. Tahsin Mert Mutlu tarafından geliştirilmiştir.
 
-- **Gerçek Zamanlı Fiyat Takibi**: Çeşitli kaynaklardan elma fiyatlarını toplar
-- **Bölgesel Analiz**: Türkiye'nin farklı bölgelerindeki fiyat farklılıklarını analiz eder
-- **Çeşit Bazlı Analiz**: Farklı elma çeşitlerinin fiyat performansını karşılaştırır
-- **Fiyat Tahmini**: Gelecek dönemler için fiyat tahminleri yapar
-- **İnteraktif Grafikler**: Chart.js ile görsel veri analizi
-- **Responsive Tasarım**: Mobil ve masaüstü uyumlu arayüz
+## 🚀 Özellikler
 
-## 📊 Veri Kaynakları
+### 📊 Veri Kaynakları
+- **İBB (İstanbul Büyükşehir Belediyesi)**: https://tarim.ibb.istanbul/avrupa-yakasi-hal-mudurlugu/hal-fiyatlari.html
+- **Başak App**: https://basakapp.com/hal-borsa-fiyatlari
+- **TOBB (Türkiye Odalar ve Borsalar Birliği)**: https://borsa.tobb.org.tr/
+- **TMO (Toprak Mahsulleri Ofisi)**: https://www.tmo.gov.tr/
 
-### Resmi Kaynaklar
-- **TÜİK (Türkiye İstatistik Kurumu)**: https://data.tuik.gov.tr/
-- **Tarım ve Orman Bakanlığı**: https://fiyat.tarimorman.gov.tr/
-- **TOBB (Türkiye Odalar ve Borsalar Birliği)**: https://www.tobb.org.tr/
+### 🍎 Elma Çeşitleri
+- Elma (Gransimit) - 1. Sınıf
+- Elma (Golden) - 1. Sınıf
+- Elma (Starkin) - 1. Sınıf
+- Elma(gransimit)II. - 2. Sınıf
+- Elma(GoldenII.) - 2. Sınıf
+- Elma(starkin)II. - 2. Sınıf
+- Elma (Organik Gransimit) - Organik
+- Elma (Pink Lady) - 1. Sınıf
 
-### Özel Veri Sağlayıcıları
-- **TARIMBİLGİ**: https://www.tarimbilgi.com/
-- **TARIMHABER**: https://www.tarimhaber.com/
-- **TARIMDANHABER**: https://www.tarimdanhaber.com/
+### 📱 Mobil Uyumluluk
+- Responsive tasarım
+- Mobil kartlar
+- Dokunmatik etkileşim
+- Otomatik veri güncelleme
 
-## 🚀 Kurulum
+### 🔄 Otomatik Güncelleme
+- Sayfa girişinde otomatik yenileme
+- Sekme değişiminde güncelleme
+- 5 dakikada bir otomatik yenileme
+- Manuel yenileme butonu
+
+## 🛠️ Kurulum
 
 ### Gereksinimler
-- Python 3.8+
-- pip (Python paket yöneticisi)
-
-### Adım 1: Projeyi İndirin
-```bash
-git clone <repository-url>
-cd hal-fiyatlari-projesi
-```
-
-### Adım 2: Sanal Ortam Oluşturun
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# veya
-venv\Scripts\activate  # Windows
-```
-
-### Adım 3: Bağımlılıkları Yükleyin
 ```bash
 pip install -r requirements.txt
 ```
 
-### Adım 4: Uygulamayı Çalıştırın
+### Çalıştırma
 ```bash
-python hal_fiyatlari_webapp.py
+python3 server.py
 ```
 
-Uygulama http://localhost:5000 adresinde çalışacaktır.
+### Erişim
+- Web Sayfası: http://localhost:5000
+- API Endpoint: http://localhost:5000/ultra_detayli_elma_fiyatlari.json
 
-## 📁 Proje Yapısı
+## 📁 Dosya Yapısı
 
 ```
-hal-fiyatlari-projesi/
-├── hal_fiyatlari_api.py      # API entegrasyonu ve veri işleme
-├── hal_fiyatlari_webapp.py   # Flask web uygulaması
-├── requirements.txt          # Python bağımlılıkları
-├── README.md                # Bu dosya
-├── templates/               # HTML şablonları
-│   └── index.html          # Ana sayfa
-└── elma_fiyatlari.json     # Örnek veri dosyası (otomatik oluşur)
+WeatherTahsin_Hal_Fiyatlari_Projesi/
+├── hal_fiyatlari_scraper.py      # Ana web scraping modülü
+├── server.py                     # Flask web sunucusu
+├── index.html                    # Ana web sayfası
+├── templates/
+│   └── index.html               # Template dosyası
+├── ultra_detayli_elma_fiyatlari.json  # Veri dosyası
+├── requirements.txt              # Python bağımlılıkları
+├── README.md                     # Bu dosya
+└── README_IBB.md                # Detaylı dokümantasyon
 ```
 
-## 🔧 API Kullanımı
+## 🔌 API Endpoints
 
-### Tüm Verileri Çekme
-```python
-from hal_fiyatlari_api import TurkiyeHalFiyatlariAPI
+### Ana Endpoints
+- `GET /` - Ana web sayfası
+- `GET /ultra_detayli_elma_fiyatlari.json` - Ultra detaylı veri
+- `GET /ibb_elma_fiyatlari.json` - Eski format (geriye uyumluluk)
 
-api = TurkiyeHalFiyatlariAPI()
-tum_veriler = api.get_tum_veriler()
+### API Endpoints
+- `GET /api/statistics` - İstatistikler
+- `GET /api/sources` - Veri kaynakları
+- `GET /api/products` - Ürün listesi
+- `GET /api/refresh` - Veri yenileme
+- `GET /health` - Sistem durumu
+
+## 📊 Veri Yapısı
+
+### Ultra Detaylı Veri Formatı
+```json
+{
+  "metadata": {
+    "scraper_version": "2.0.0",
+    "data_collection_time": "2025-08-10 17:30:00",
+    "data_quality_level": "Ultra High"
+  },
+  "aggregated_data": [
+    {
+      "name": "Elma (Gransimit)",
+      "min_price": 70.0,
+      "max_price": 90.0,
+      "avg_price": 80.0,
+      "quality": "1. Sınıf",
+      "organic_status": false,
+      "price_trend": "Yükseliş",
+      "price_volatility": 25.0
+    }
+  ],
+  "statistics": {
+    "price_statistics": {...},
+    "quality_distribution": {...},
+    "volatility_analysis": {...}
+  },
+  "quality_metrics": {
+    "overall_quality_score": 90.3,
+    "data_freshness": 95,
+    "accuracy_score": 92
+  }
+}
 ```
 
-### Hal Fiyatları
-```python
-hal_verileri = api.get_manuel_hal_verileri()
-```
+## 🎨 Özellikler
 
-### Çeşit Analizi
-```python
-cesit_analizi = api.get_elma_cesitleri_fiyatlari()
-```
+### Görselleştirme
+- Chart.js ile interaktif grafikler
+- Kalite bazlı renk kodlaması
+- Trend analizi görselleştirmesi
+- Mobil uyumlu kartlar
 
-### Bölgesel Analiz
-```python
-bolgesel_analiz = api.get_bolgesel_fiyat_analizi()
-```
+### Veri Kalitesi
+- Çoklu kaynak doğrulama
+- Veri tazeliği metrikleri
+- Tutarlılık kontrolü
+- Hata yönetimi
 
-### Fiyat Tahmini
-```python
-tahmin = api.get_fiyat_tahmini(
-    cesit='Amasya',
-    bolge='Marmara',
-    tarih=datetime.now()
-)
-```
+### Kullanıcı Deneyimi
+- Gerçek zamanlı güncelleme
+- Bildirim sistemi
+- Responsive tasarım
+- Kolay navigasyon
 
-## 🌍 Web API Endpoints
+## 🔗 Bağlantılar
 
-### GET /api/fiyatlar
-Tüm fiyat verilerini döndürür.
+- **WeatherTahsin**: https://weathertahsin.netlify.app
+- **İBB Hal Fiyatları**: https://tarim.ibb.istanbul/avrupa-yakasi-hal-mudurlugu/hal-fiyatlari.html
+- **Başak App**: https://basakapp.com/hal-borsa-fiyatlari
 
-### GET /api/hal-fiyatlari
-Hal fiyatlarını döndürür.
+## 👨‍💻 Geliştirici
 
-### GET /api/cesit-analizi
-Çeşit analizini döndürür.
+**Tahsin Mert Mutlu** tarafından kodlanmıştır.
 
-### GET /api/bolgesel-analiz
-Bölgesel analizi döndürür.
+## 📄 Lisans
 
-### GET /api/tahmin?cesit=Amasya&bolge=Marmara&tarih=2024-01-15
-Fiyat tahmini döndürür.
+Bu proje eğitim ve araştırma amaçlı geliştirilmiştir.
 
-## 📈 Elma Çeşitleri
+## 🆘 Destek
 
-Sistem şu elma çeşitlerini destekler:
+Herhangi bir sorun veya öneri için lütfen iletişime geçin.
 
-- **Amasya**: Geleneksel Türk çeşidi
-- **Golden Delicious**: Popüler sarı elma
-- **Starking**: Kırmızı elma çeşidi
-- **Granny Smith**: Yeşil elma
-- **Fuji**: Tatlı elma çeşidi
+---
 
-## 🗺️ Bölgeler
-
-- **Marmara**: İstanbul, Bursa, Tekirdağ
-- **İç Anadolu**: Ankara, Konya, Kayseri
-- **Ege**: İzmir, Aydın, Manisa
-- **Karadeniz**: Trabzon, Samsun, Giresun
-- **Akdeniz**: Antalya, Mersin, Adana
-
-## 🔮 Fiyat Tahmin Algoritması
-
-Sistem şu faktörleri dikkate alarak fiyat tahmini yapar:
-
-1. **Çeşit Faktörü**: Her elma çeşidinin piyasa değeri
-2. **Bölge Faktörü**: Bölgesel arz-talep dengesi
-3. **Mevsim Faktörü**: Yılın hangi döneminde olduğumuz
-4. **Tarihsel Veriler**: Geçmiş fiyat trendleri
-
-## 📊 Veri Güncelleme
-
-Veriler şu sıklıklarla güncellenir:
-- **Manuel Veriler**: Günlük
-- **API Verileri**: Saatlik
-- **Tahminler**: Gerçek zamanlı
-
-## 🛠️ Geliştirme
-
-### Yeni Veri Kaynağı Ekleme
-1. `hal_fiyatlari_api.py` dosyasına yeni metod ekleyin
-2. `get_tum_veriler()` metodunu güncelleyin
-3. Web arayüzünü gerekirse güncelleyin
-
-### Yeni Elma Çeşidi Ekleme
-1. `get_elma_cesitleri_fiyatlari()` metodunu güncelleyin
-2. `get_fiyat_tahmini()` metodundaki faktörleri güncelleyin
-3. Web arayüzündeki seçenekleri güncelleyin
-
-## 🤝 Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/yeni-ozellik`)
-3. Commit yapın (`git commit -am 'Yeni özellik eklendi'`)
-4. Push yapın (`git push origin feature/yeni-ozellik`)
-5. Pull Request oluşturun
-
-## 📝 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
-
-## 📞 İletişim
-
-- **Geliştirici**: [Adınız]
-- **E-posta**: [e-posta@adresiniz.com]
-- **GitHub**: [github.com/kullaniciadi]
-
-## 🙏 Teşekkürler
-
-Bu proje şu kaynaklardan veri toplamaktadır:
-- TÜİK
-- Tarım ve Orman Bakanlığı
-- TOBB
-- TARIMBİLGİ
-- TARIMHABER
-- TARIMDANHABER
-
-## 📋 Changelog
-
-### v1.0.0 (2024-01-15)
-- İlk sürüm
-- Temel API entegrasyonu
-- Web arayüzü
-- Fiyat tahmin sistemi
-- Grafik ve analiz araçları
+**Sistem Versiyonu**: v2.0.0  
+**Son Güncelleme**: 10 Ağustos 2025  
+**Veri Kalitesi**: Ultra High
