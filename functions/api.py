@@ -1,14 +1,36 @@
 import json
-import os
 from datetime import datetime
-from flask import Flask, jsonify, request
-import requests
-from bs4 import BeautifulSoup
 import random
 
-app = Flask(__name__)
+def handler(event, context):
+    """Netlify function handler"""
+    
+    # Get the path from the event
+    path = event.get('path', '')
+    
+    # Route to appropriate function based on path
+    if path == '/.netlify/functions/api/ultra_detayli_elma_fiyatlari':
+        return ultra_detayli_elma_fiyatlari(event, context)
+    elif path == '/.netlify/functions/api/statistics':
+        return get_statistics(event, context)
+    elif path == '/.netlify/functions/api/products':
+        return get_products(event, context)
+    elif path == '/.netlify/functions/api/health':
+        return health_check(event, context)
+    elif path == '/.netlify/functions/api/refresh':
+        return refresh_data(event, context)
+    else:
+        return {
+            'statusCode': 404,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({'error': 'Endpoint not found'})
+        }
 
-# Simulate the scraper functionality
 def get_ultra_detayli_elma_fiyatlari():
     """Ultra detaylı elma fiyatları verisi"""
     return {
@@ -284,71 +306,151 @@ def get_ultra_detayli_elma_fiyatlari():
         }
     }
 
-@app.route('/.netlify/functions/api/ultra_detayli_elma_fiyatlari', methods=['GET'])
-def ultra_detayli_elma_fiyatlari():
+def ultra_detayli_elma_fiyatlari(event, context):
     """Ultra detaylı elma fiyatları JSON verisini döndür"""
     try:
         data = get_ultra_detayli_elma_fiyatlari()
-        return jsonify(data)
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps(data, ensure_ascii=False)
+        }
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({'error': str(e)})
+        }
 
-@app.route('/.netlify/functions/api/statistics', methods=['GET'])
-def get_statistics():
+def get_statistics(event, context):
     """Detaylı istatistikleri döndür"""
     try:
         data = get_ultra_detayli_elma_fiyatlari()
-        return jsonify({
-            'statistics': data.get('statistics', {}),
-            'quality_metrics': data.get('quality_metrics', {}),
-            'metadata': data.get('metadata', {})
-        })
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({
+                'statistics': data.get('statistics', {}),
+                'quality_metrics': data.get('quality_metrics', {}),
+                'metadata': data.get('metadata', {})
+            }, ensure_ascii=False)
+        }
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({'error': str(e)})
+        }
 
-@app.route('/.netlify/functions/api/products', methods=['GET'])
-def get_products():
+def get_products(event, context):
     """Ürün listesini döndür"""
     try:
         data = get_ultra_detayli_elma_fiyatlari()
-        return jsonify({
-            'products': data.get('aggregated_data', []),
-            'total_count': len(data.get('aggregated_data', [])),
-            'quality_distribution': data.get('statistics', {}).get('quality_distribution', {}),
-            'regional_distribution': data.get('statistics', {}).get('regional_distribution', {})
-        })
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({
+                'products': data.get('aggregated_data', []),
+                'total_count': len(data.get('aggregated_data', [])),
+                'quality_distribution': data.get('statistics', {}).get('quality_distribution', {}),
+                'regional_distribution': data.get('statistics', {}).get('regional_distribution', {})
+            }, ensure_ascii=False)
+        }
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({'error': str(e)})
+        }
 
-@app.route('/.netlify/functions/api/health', methods=['GET'])
-def health_check():
+def health_check(event, context):
     """Sağlık kontrolü"""
     try:
         data = get_ultra_detayli_elma_fiyatlari()
-        return jsonify({
-            'status': 'healthy',
-            'service': 'Ultra Detaylı Hal Fiyatları API',
-            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'data_quality': data['metadata']['data_quality_level'],
-            'product_count': len(data['aggregated_data']),
-            'source_count': data['metadata']['data_sources_count']
-        })
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({
+                'status': 'healthy',
+                'service': 'Ultra Detaylı Hal Fiyatları API',
+                'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'data_quality': data['metadata']['data_quality_level'],
+                'product_count': len(data['aggregated_data']),
+                'source_count': data['metadata']['data_sources_count']
+            }, ensure_ascii=False)
+        }
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({'error': str(e)})
+        }
 
-@app.route('/.netlify/functions/api/refresh', methods=['GET'])
-def refresh_data():
+def refresh_data(event, context):
     """Veri yenileme"""
     try:
-        # Simulate data refresh
-        return jsonify({
-            'success': True,
-            'message': 'Ultra detaylı veriler başarıyla güncellendi',
-            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        })
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({
+                'success': True,
+                'message': 'Ultra detaylı veriler başarıyla güncellendi',
+                'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            }, ensure_ascii=False)
+        }
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-# For local development
-if __name__ == '__main__':
-    app.run(debug=True)
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+            },
+            'body': json.dumps({'error': str(e)})
+        }
