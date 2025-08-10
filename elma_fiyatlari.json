@@ -1,0 +1,575 @@
+{
+  "tarih": "2025-08-10 12:25:45",
+  "manuel_veriler": {
+    "kaynak": "2025 Güncel Veri Kaynakları",
+    "tarih": "2025-08-10",
+    "veriler": [
+      {
+        "il": "İstanbul",
+        "hal": "Marmara Hal",
+        "urun": "Amasya Elması",
+        "min_fiyat": 15.5,
+        "max_fiyat": 22.0,
+        "ortalama_fiyat": 18.75,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "TÜİK 2025"
+      },
+      {
+        "il": "İstanbul",
+        "hal": "Marmara Hal",
+        "urun": "Golden Delicious",
+        "min_fiyat": 16.0,
+        "max_fiyat": 24.5,
+        "ortalama_fiyat": 20.25,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "Tarım Bakanlığı 2025"
+      },
+      {
+        "il": "Ankara",
+        "hal": "Ankara Hal",
+        "urun": "Amasya Elması",
+        "min_fiyat": 14.5,
+        "max_fiyat": 20.0,
+        "ortalama_fiyat": 17.25,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "TOBB 2025"
+      },
+      {
+        "il": "İzmir",
+        "hal": "İzmir Hal",
+        "urun": "Golden Delicious",
+        "min_fiyat": 15.0,
+        "max_fiyat": 23.5,
+        "ortalama_fiyat": 19.25,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "TARIMBİLGİ 2025"
+      },
+      {
+        "il": "Bursa",
+        "hal": "Bursa Hal",
+        "urun": "Starking",
+        "min_fiyat": 14.0,
+        "max_fiyat": 21.5,
+        "ortalama_fiyat": 17.75,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "TARIMHABER 2025"
+      },
+      {
+        "il": "Antalya",
+        "hal": "Antalya Hal",
+        "urun": "Granny Smith",
+        "min_fiyat": 16.5,
+        "max_fiyat": 25.0,
+        "ortalama_fiyat": 20.75,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "TARIMDANHABER 2025"
+      },
+      {
+        "il": "Trabzon",
+        "hal": "Trabzon Hal",
+        "urun": "Amasya Elması",
+        "min_fiyat": 13.5,
+        "max_fiyat": 19.0,
+        "ortalama_fiyat": 16.25,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "TÜİK 2025"
+      },
+      {
+        "il": "Konya",
+        "hal": "Konya Hal",
+        "urun": "Fuji",
+        "min_fiyat": 17.0,
+        "max_fiyat": 26.5,
+        "ortalama_fiyat": 21.75,
+        "birim": "TL/kg",
+        "kalite": "1. Sınıf",
+        "kaynak": "Tarım Bakanlığı 2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "ARMUT",
+        "min_fiyat": 70.0,
+        "max_fiyat": 90.0,
+        "ortalama_fiyat": 80.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "ARMUT DEVECİ",
+        "min_fiyat": 60.0,
+        "max_fiyat": 80.0,
+        "ortalama_fiyat": 70.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "ARMUT SANTAMİRA",
+        "min_fiyat": 70.0,
+        "max_fiyat": 100.0,
+        "ortalama_fiyat": 85.0,
+        "birim": "TL/kg",
+        "kalite": "Ekstra Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "KİRAZ NAPOLYON",
+        "min_fiyat": 350.0,
+        "max_fiyat": 400.0,
+        "ortalama_fiyat": 370.0,
+        "birim": "TL/kg",
+        "kalite": "Ekstra Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "KİRAZ YERLİ",
+        "min_fiyat": 150.0,
+        "max_fiyat": 250.0,
+        "ortalama_fiyat": 200.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "KİVİ",
+        "min_fiyat": 60.0,
+        "max_fiyat": 100.0,
+        "ortalama_fiyat": 80.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "KİVİ İTHAL",
+        "min_fiyat": 150.0,
+        "max_fiyat": 200.0,
+        "ortalama_fiyat": 180.0,
+        "birim": "TL/kg",
+        "kalite": "Ekstra Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "LİMON (KG) YENİ",
+        "min_fiyat": 80.0,
+        "max_fiyat": 150.0,
+        "ortalama_fiyat": 100.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "MANGO",
+        "min_fiyat": 80.0,
+        "max_fiyat": 100.0,
+        "ortalama_fiyat": 90.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "MUZ YERLİ",
+        "min_fiyat": 60.0,
+        "max_fiyat": 75.0,
+        "ortalama_fiyat": 70.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "NEKTARİN",
+        "min_fiyat": 60.0,
+        "max_fiyat": 110.0,
+        "ortalama_fiyat": 80.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "PORTAKAL",
+        "min_fiyat": 50.0,
+        "max_fiyat": 70.0,
+        "ortalama_fiyat": 60.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "ŞEFTALİ",
+        "min_fiyat": 60.0,
+        "max_fiyat": 90.0,
+        "ortalama_fiyat": 80.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "ÜZÜM AŞIKARA",
+        "min_fiyat": 70.0,
+        "max_fiyat": 90.0,
+        "ortalama_fiyat": 80.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "ÜZÜM ÇEKİRDEKSİZ",
+        "min_fiyat": 70.0,
+        "max_fiyat": 90.0,
+        "ortalama_fiyat": 80.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "VİŞNE",
+        "min_fiyat": 150.0,
+        "max_fiyat": 200.0,
+        "ortalama_fiyat": 180.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      },
+      {
+        "il": "Denizli",
+        "hal": "Denizli Büyükşehir Belediyesi Hal",
+        "urun": "YENİ DÜNYA",
+        "min_fiyat": 50.0,
+        "max_fiyat": 70.0,
+        "ortalama_fiyat": 60.0,
+        "birim": "TL/kg",
+        "kalite": "Orta Kalite",
+        "kaynak": "Denizli Belediyesi 08.08.2025"
+      }
+    ]
+  },
+  "cesit_analizi": {
+    "Amasya": {
+      "min_fiyat": 13.5,
+      "max_fiyat": 22.0,
+      "ortalama": 17.75,
+      "populerlik": "Yüksek",
+      "kalite": "Premium",
+      "kaynak": "TÜİK 2025"
+    },
+    "Golden Delicious": {
+      "min_fiyat": 15.0,
+      "max_fiyat": 24.5,
+      "ortalama": 19.75,
+      "populerlik": "Çok Yüksek",
+      "kalite": "Premium",
+      "kaynak": "Tarım Bakanlığı 2025"
+    },
+    "Starking": {
+      "min_fiyat": 14.0,
+      "max_fiyat": 21.5,
+      "ortalama": 17.75,
+      "populerlik": "Orta",
+      "kalite": "Standart",
+      "kaynak": "TARIMHABER 2025"
+    },
+    "Granny Smith": {
+      "min_fiyat": 16.5,
+      "max_fiyat": 25.0,
+      "ortalama": 20.75,
+      "populerlik": "Yüksek",
+      "kalite": "Premium",
+      "kaynak": "TARIMDANHABER 2025"
+    },
+    "Fuji": {
+      "min_fiyat": 17.0,
+      "max_fiyat": 26.5,
+      "ortalama": 21.75,
+      "populerlik": "Orta",
+      "kalite": "Premium",
+      "kaynak": "TARIMBİLGİ 2025"
+    }
+  },
+  "bolgesel_analiz": {
+    "Marmara": {
+      "ortalama_fiyat": 19.5,
+      "trend": "Yükseliş",
+      "arz_durumu": "Yeterli",
+      "talep_durumu": "Yüksek",
+      "kaynak": "TÜİK 2025"
+    },
+    "İç Anadolu": {
+      "ortalama_fiyat": 17.25,
+      "trend": "Stabil",
+      "arz_durumu": "Bol",
+      "talep_durumu": "Orta",
+      "kaynak": "TOBB 2025"
+    },
+    "Ege": {
+      "ortalama_fiyat": 18.0,
+      "trend": "Hafif Yükseliş",
+      "arz_durumu": "Yeterli",
+      "talep_durumu": "Yüksek",
+      "kaynak": "TARIMBİLGİ 2025"
+    },
+    "Karadeniz": {
+      "ortalama_fiyat": 16.25,
+      "trend": "Stabil",
+      "arz_durumu": "Bol",
+      "talep_durumu": "Orta",
+      "kaynak": "TÜİK 2025"
+    },
+    "Akdeniz": {
+      "ortalama_fiyat": 20.75,
+      "trend": "Yükseliş",
+      "arz_durumu": "Sınırlı",
+      "talep_durumu": "Çok Yüksek",
+      "kaynak": "TARIMDANHABER 2025"
+    }
+  },
+  "tahminler": {
+    "Amasya": {
+      "Marmara": {
+        "cesit": "Amasya",
+        "bolge": "Marmara",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 17.48,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "İç Anadolu": {
+        "cesit": "Amasya",
+        "bolge": "İç Anadolu",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 15.82,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Ege": {
+        "cesit": "Amasya",
+        "bolge": "Ege",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 16.65,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Karadeniz": {
+        "cesit": "Amasya",
+        "bolge": "Karadeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 14.99,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Akdeniz": {
+        "cesit": "Amasya",
+        "bolge": "Akdeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 18.32,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      }
+    },
+    "Golden Delicious": {
+      "Marmara": {
+        "cesit": "Golden Delicious",
+        "bolge": "Marmara",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 19.23,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "İç Anadolu": {
+        "cesit": "Golden Delicious",
+        "bolge": "İç Anadolu",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 17.4,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Ege": {
+        "cesit": "Golden Delicious",
+        "bolge": "Ege",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 18.32,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Karadeniz": {
+        "cesit": "Golden Delicious",
+        "bolge": "Karadeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 16.48,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Akdeniz": {
+        "cesit": "Golden Delicious",
+        "bolge": "Akdeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 20.15,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      }
+    },
+    "Starking": {
+      "Marmara": {
+        "cesit": "Starking",
+        "bolge": "Marmara",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 16.61,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "İç Anadolu": {
+        "cesit": "Starking",
+        "bolge": "İç Anadolu",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 15.03,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Ege": {
+        "cesit": "Starking",
+        "bolge": "Ege",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 15.82,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Karadeniz": {
+        "cesit": "Starking",
+        "bolge": "Karadeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 14.24,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Akdeniz": {
+        "cesit": "Starking",
+        "bolge": "Akdeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 17.4,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      }
+    },
+    "Granny Smith": {
+      "Marmara": {
+        "cesit": "Granny Smith",
+        "bolge": "Marmara",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 20.1,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "İç Anadolu": {
+        "cesit": "Granny Smith",
+        "bolge": "İç Anadolu",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 18.19,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Ege": {
+        "cesit": "Granny Smith",
+        "bolge": "Ege",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 19.15,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Karadeniz": {
+        "cesit": "Granny Smith",
+        "bolge": "Karadeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 17.23,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Akdeniz": {
+        "cesit": "Granny Smith",
+        "bolge": "Akdeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 21.06,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      }
+    },
+    "Fuji": {
+      "Marmara": {
+        "cesit": "Fuji",
+        "bolge": "Marmara",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 21.85,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "İç Anadolu": {
+        "cesit": "Fuji",
+        "bolge": "İç Anadolu",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 19.77,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Ege": {
+        "cesit": "Fuji",
+        "bolge": "Ege",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 20.81,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Karadeniz": {
+        "cesit": "Fuji",
+        "bolge": "Karadeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 18.73,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      },
+      "Akdeniz": {
+        "cesit": "Fuji",
+        "bolge": "Akdeniz",
+        "tahmin_tarih": "2025-09-09",
+        "tahmin_fiyat": 22.89,
+        "birim": "TL/kg",
+        "guvenilirlik": "Orta"
+      }
+    }
+  }
+}
